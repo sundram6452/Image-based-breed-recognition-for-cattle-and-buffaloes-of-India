@@ -1,0 +1,11 @@
+train: C:/Users/kumar/OneDrive/Desktop/cattles/dataset/train
+val: C:/Users/kumar/OneDrive/Desktop/cattles/dataset/val
+test: C:/Users/kumar/OneDrive/Desktop/cattles/dataset/test
+
+names:
+  
+  0: Ayrshire
+  1: Brown
+  2: Dane
+  3: Friesian
+  4: Jersey
