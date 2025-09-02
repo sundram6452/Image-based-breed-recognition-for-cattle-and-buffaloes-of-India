@@ -12,7 +12,7 @@ class_names = {
     3: "Friesian",
     4: "Jersey"
 }
-url="https://cdn.britannica.com/53/157153-050-E5582B5A/Holstein-cow.jpg"
+url="https://wallpapertag.com/wallpaper/full/1/b/0/435688-free-cute-dogs-and-puppies-wallpaper-2560x1600-for-pc.jpg"
 
 # Predict on a single image
 results = model.predict(url)
@@ -21,6 +21,9 @@ for r in results:
     probs = r.probs.data.cpu().numpy()
     top_indices = probs.argsort()[::-1]  # sort by confidence descending
 
+    if top_indices[0]<50:
+        print("This is not a cattle")
+        break
     print("\nTop Predictions:")
     for idx in top_indices[:]:  # show top-3
         print(f"{class_names[idx]}: {probs[idx]*100:.2f}%")
